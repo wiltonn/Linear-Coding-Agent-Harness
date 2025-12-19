@@ -8,9 +8,10 @@ happens in Linear - this is your source of truth for what needs to be built.
 
 ### FIRST: Read the Project Specification
 
-Start by reading `app_spec.txt` in your working directory. This file contains
-the complete specification for what you need to build. Read it carefully
-before proceeding.
+Start by reading `app_spec.txt` in your current working directory. First, use `pwd`
+to see your working directory, then read `app_spec.txt` from that location using
+a relative path (`./app_spec.txt`). This file contains the complete specification
+for what you need to build. Read it carefully before proceeding.
 
 ### SECOND: Set Up Linear Project
 
@@ -22,11 +23,14 @@ Before creating issues, you need to set up Linear:
 
 2. **Create a Linear project:**
    Use `mcp__linear__create_project` to create a new project:
-   - `name`: Use the project name from app_spec.txt (e.g., "Claude.ai Clone")
+   - `name`: Extract the ACTUAL project name from app_spec.txt (look at the title/header)
    - `teamIds`: Array with your team ID
    - `description`: Brief project overview from app_spec.txt
 
    Save the returned project ID - you'll use it when creating issues.
+
+   **IMPORTANT:** Read app_spec.txt carefully to get the correct project name.
+   Do NOT use example names - use the actual name from the spec file.
 
 ### CRITICAL TASK: Create Linear Issues
 
@@ -37,12 +41,16 @@ comprehensively cover all features in the spec.
 **For each feature, create an issue with:**
 
 ```
-title: Brief feature name (e.g., "Auth - User login flow")
+title: Brief feature name based on the spec (e.g., "File Upload - Drag and drop interface")
 teamId: [Use the team ID you found earlier]
 projectId: [Use the project ID from the project you created]
 description: Markdown with feature details and test steps (see template below)
 priority: 1-4 based on importance (1=urgent/foundational, 4=low/polish)
 ```
+
+**CRITICAL:** Create issues that match the features described in app_spec.txt.
+Do NOT create generic features - read the spec carefully and create issues for the
+ACTUAL requirements listed there.
 
 **Issue Description Template:**
 ```markdown

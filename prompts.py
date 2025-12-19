@@ -32,6 +32,6 @@ def copy_spec_to_project(project_dir: Path) -> None:
     """Copy the app spec file into the project directory for the agent to read."""
     spec_source = PROMPTS_DIR / "app_spec.txt"
     spec_dest = project_dir / "app_spec.txt"
-    if not spec_dest.exists():
-        shutil.copy(spec_source, spec_dest)
-        print("Copied app_spec.txt to project directory")
+    # Always copy to ensure we have the latest spec
+    shutil.copy(spec_source, spec_dest)
+    print("Copied app_spec.txt to project directory")

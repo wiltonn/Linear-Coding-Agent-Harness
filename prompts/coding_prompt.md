@@ -16,14 +16,15 @@ pwd
 
 # 2. List files to understand project structure
 ls -la
+```
 
-# 3. Read the project specification to understand what you're building
-cat app_spec.txt
+Then use the Read tool to read files (don't use cat):
+- Read `./app_spec.txt` to understand what you're building
+- Read `./.linear_project.json` to get the Linear project details
 
-# 4. Read the Linear project state
-cat .linear_project.json
-
-# 5. Check recent git history
+Finally, check git history:
+```bash
+# Check recent git history
 git log --oneline -20
 ```
 
