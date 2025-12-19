@@ -38,6 +38,8 @@ ALLOWED_COMMANDS = {
     "pkill",  # For killing dev servers; validated separately
     # Script execution
     "init.sh",  # Init scripts; validated separately
+    "cd",
+    "echo"
 }
 
 # Commands that need additional validation even when in the allowlist
